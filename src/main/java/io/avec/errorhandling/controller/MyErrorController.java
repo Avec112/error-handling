@@ -2,11 +2,17 @@ package io.avec.errorhandling.controller;
 
 import org.springframework.boot.web.servlet.error.ErrorController;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
+
+/**
+ * Controller handles HTML but what about JSON or plain text?
+ * See MyErrorController2.java
+ */
 
 @Controller
 public class MyErrorController implements ErrorController {
@@ -17,7 +23,8 @@ public class MyErrorController implements ErrorController {
     }
 
 
-    @RequestMapping("/error")
+    // HTML response
+    @RequestMapping(value = "/error", produces = MediaType.TEXT_HTML_VALUE)
     public String handleError(HttpServletRequest request) {
         // get error status
         Object status = request.getAttribute(RequestDispatcher.ERROR_STATUS_CODE);

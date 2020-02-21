@@ -79,11 +79,11 @@ public class MyErrorController implements ErrorController {
 }
 ```
 
-Class MyErrorController will override the default BasicErrorController provided by default.
-All error handling will from now on be handled by MyErrorController.
+Class `MyErrorController` will override the default `BasicErrorController` provided by default.
+All error handling will from now on be handled by `MyErrorController`.
 
 Further steps could be to provide more information to be injected from the controller into 
 the error pages. This is of course possible but outside the scope of this demonstration.
-Also what if you have a rest service and something fails will the client get some error.html page in return?   
+Also what if you have a rest service and something fails will the client get some error.html page in return? (Tip: Take a look into `MyErrorController2.java` and `500.html`)  
 
 Feel free to experiment further. 
