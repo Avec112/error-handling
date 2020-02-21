@@ -1,5 +1,6 @@
 # Requirements 
 * Java 13 (please change in pom.xml if need older version of Java)
+* Maven 3.5+
 * Spring Boot 2.2.4 (older may work also)
 * Thymeleaf dependency
 
