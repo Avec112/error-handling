@@ -44,7 +44,7 @@ Now we will try to add a even more configurable error handling mechanism.
 This will be done by implementing the interface `ErrorController`
 
 Create the class `MyErrorController` like this
-```
+```Java
 @Controller
 public class MyErrorController implements ErrorController {
 
